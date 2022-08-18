@@ -4,7 +4,6 @@ from random import choice, randint, shuffle
 import json
 import pyperclip
 #If running on VSCode to install pyperclip package open new terminal and immediatly type "pip3 install pyperclip"
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 #Password Generator Project
 def generate_password():
@@ -23,7 +22,7 @@ def generate_password():
     password_entry.insert(0, password)
     pyperclip.copy(password)
 
-# ---------------------------- SAVE PASSWORD ------------------------------- #
+# Save Password
 def save():
 
     website = website_entry.get()
@@ -57,8 +56,6 @@ def save():
             website_entry.delete(0, END)
             password_entry.delete(0, END)
 
-
-# ---------------------------- FIND PASSWORD ------------------------------- #
 def find_password():
     website = website_entry.get()
     try:
@@ -75,7 +72,7 @@ def find_password():
             messagebox.showinfo(title="Error", message=f"No details for {website} exists.")
 
 
-# ---------------------------- UI SETUP ------------------------------- #
+# UI
 
 window = Tk()
 window.title("Password Manager")
